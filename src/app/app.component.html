@@ -1,0 +1,9 @@
+<input value={{username}}  [(ngModel)]="username"  />
+
+<button type="button" (click)="getHouses($event.target.value)">Get Data</button>
+
+
+<ul>
+
+  <li *ngFor="let house of unoccupied_houses"> Housename => {{ house.name }} , Housesize => {{ house.size }} <button (click)="occupyHouse(house.id)">Occupy</button> </li>
+</ul>
